@@ -47,7 +47,7 @@ getData(ev, year, month){
 }
 render() {
     return (
-      <div>
+      <div style="padding-left: 163px">
         <Tabs activeKey={this.state.activeTab} onSelect={this.handleSelect}>
           <Tab eventKey={2016} title={<YearTabsRouter year='2016' />}><MonthTabs year='2016' monthlyActiveTab={this.state.selectedMonth}/></Tab>
           <Tab eventKey={2017} title={<YearTabsRouter year='2017' />}><MonthTabs year='2017' monthlyActiveTab={this.state.selectedMonth}/></Tab>
@@ -63,14 +63,14 @@ render() {
           <tbody>
             {
               this.state.data.map((exp) => {
-                return  <tr><td className='counterCell'></td><td className='desc-col'>{exp.description}</td><td className='button-col'>{exp.amount}</td><td className='button-col'>{exp.month}</td><td className='button-col'>{exp.year}</td><td className='button-col'><Update expense={exp}/></td><td className='button-col'><Delete expense={exp} /></td></tr>
+                return  <tr><td className='counterCell'></td><td className='desc-col'>{exp.description}</td><td className='button-col'>{exp.amount}</td><td className='button-col'>{exp.month}</td><td className='button-col'>{exp.year}</td><td className='button-col'><Update expense={exp}/></td><td className='button-col'><Delete expense={exp} /></td>
+                            </tr>
               })
             }
             </tbody>
 </table>
 
       </div>
-
     );
   }
 }

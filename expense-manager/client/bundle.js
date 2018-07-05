@@ -53846,7 +53846,7 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { style: 'padding-left: 163px' },
         _react2.default.createElement(
           _reactBootstrap.Tabs,
           { activeKey: this.state.activeTab, onSelect: this.handleSelect },
@@ -53958,7 +53958,16 @@ var App = function (_React$Component) {
                   _react2.default.createElement(_Delete2.default, { expense: exp })
                 )
               );
-            })
+            }),
+            _react2.default.createElement(
+              'tr',
+              null,
+              _react2.default.createElement(
+                'td',
+                null,
+                _react2.default.createElement(_Chart2.default, null)
+              )
+            )
           )
         )
       );
@@ -68736,7 +68745,7 @@ var Chart = function (_Component) {
   function Chart() {
     _classCallCheck(this, Chart);
 
-    return _possibleConstructorReturn(this, (Chart.__proto__ || Object.getPrototypeOf(Chart)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Chart.__proto__ || Object.getPrototypeOf(Chart)).call(this, props));
   }
 
   _createClass(Chart, [{
@@ -68744,7 +68753,7 @@ var Chart = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { classNAme: 'chart' },
+        { className: 'chart' },
         'CHART COMPONENT'
       );
     }
