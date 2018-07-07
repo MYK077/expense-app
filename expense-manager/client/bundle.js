@@ -53958,16 +53958,7 @@ var App = function (_React$Component) {
                   _react2.default.createElement(_Delete2.default, { expense: exp })
                 )
               );
-            }),
-            _react2.default.createElement(
-              'tr',
-              null,
-              _react2.default.createElement(
-                'td',
-                null,
-                _react2.default.createElement(_Chart2.default, null)
-              )
-            )
+            })
           )
         )
       );

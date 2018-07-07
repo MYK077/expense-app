@@ -3,7 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/App.css"></link>
     <title>Expense Manager</title>
   </head>
@@ -12,24 +13,50 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Expense Manager</a>
+          <a class="navbar-brand" href="#">User Name</a>
         </div>
-        <ul class="nav navbar-nav">
+        <!-- <ul class="nav navbar-nav">
           <li class="active"><a href="#">User Name</a></li>
-        </ul>
+        </ul> -->
         <ul class="nav navbar-nav closebtn">
           <li class="active"><a href="#">Logout</a></li>
         </ul>
       </div>
     </nav>
   </div>
-    <div class="sidenav">
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+  <div class="sidenav">
+    <a href="#about">API</a>
+    <a href="#services">Manual</a>
+    <button class="dropdown-btn btn-group dropright ">Questionnaire
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-    <div id="root"></div>
+    <a href="#contact">AP</a>
+  </div>
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+  <div id="root"></div>
 </body>
   <script src="bundle.js"></script>
 </html>
